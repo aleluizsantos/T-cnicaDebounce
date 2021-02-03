@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #fd951f;
+  --primary-color: #d27cec;
 }
 
 html {
@@ -13,7 +13,7 @@ html {
 }
 
 body{
-  background: #212121;
+  background: #252424;
   
   font-family: 'Montserrat', sans-serif;
 }
@@ -33,6 +33,9 @@ h1 {
   justify-content:center;
 }
 
+.wrap .result {
+  color: #fff;
+}
 
 
 .search {
@@ -45,8 +48,9 @@ h1 {
 
 input {
   width: 100%;
+  height: 30px;
   
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-right: none;
   border-radius: 5px 0 0 5px;
     
@@ -55,6 +59,7 @@ input {
   outline: none;
   
   color: #212121;
+  font-size: 20px;
 }
 
 input:focus{
@@ -64,8 +69,8 @@ input:focus{
 button {
   background: var(--primary-color);
   
-  width: 40px;
-  height: 36px;
+  width: 56px;
+  height: 50px;
   
   border-radius: 0 6px 6px 0;
   border: 1px solid var(--primary-color);

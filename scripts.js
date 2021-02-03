@@ -1,4 +1,4 @@
-// Debounce
+// Função Debounce que executará a função passada apos um determinado tempo
 const debounceEvent = (fn, wait = 1000, time) => (...args) =>
   clearTimeout(time, (time = setTimeout(() => fn(...args), wait)));
 
@@ -8,9 +8,12 @@ const filterUsers = async (name) =>
   ).then((res) => res.json());
 
 function handleKeyUp(event) {
-  filterUsers(event.target.value).then((users) =>
-    console.log(users.map((user) => user.name))
-  );
+  var el = document.getElementById("result");
+
+  filterUsers(event.target.value).then((users) => {
+    //console.log(users.map((user) => user.name))
+    el.innerHTML = users.map((user) => `<p>${user.name}</p>`);
+  });
 }
 
 document
